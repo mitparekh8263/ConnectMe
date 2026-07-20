@@ -1,0 +1,25 @@
+/* 1. Clean Slate (Removes default Vite junk) */
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, sans-serif;
+  background-color: #f8fafc;
+}
+
+/* 2. 🚀 THE DARK MODE ENGINE */
+html {
+  transition: filter 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+
+/* 3. Mathematically flip every color */
+html.dark-mode {
+  filter: invert(1) hue-rotate(180deg);
+  background-color: #111111;
+}
+
+/* 4. Protect images and emojis from being inverted! */
+html.dark-mode img,
+html.dark-mode .emoji {
+  filter: invert(1) hue-rotate(180deg);
+}
